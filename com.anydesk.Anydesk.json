@@ -80,9 +80,10 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "tar xf anydesk.tar.gz",
+                        "tar -xf anydesk.tar.gz",
                         "rm -f anydesk.tar.gz",
                         "mv anydesk-2.9.5/* .",
+                        "chmod 755 anydesk",
                         "rm -rf anydesk-2.9.5"
                     ]
                 },

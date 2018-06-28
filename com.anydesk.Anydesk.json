@@ -15,6 +15,16 @@
     ],
     "modules": [
         {
+            "name": "libxmu",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
+                    "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
+                }
+            ]
+        },
+        {
             "name": "pangox-compat",
             "sources": [
                 {
@@ -40,7 +50,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://git.gnome.org/browse/gtkglext",
+                    "url": "https://gitlab.gnome.org/Archive/gtkglext",
                     "commit": "04131c5f69070b2f194f02edd45b0622ca03793c"
                 }
             ]
@@ -67,7 +77,7 @@
             "build-commands": [
                 "install -Dm755 apply_extra /app/bin/apply_extra",
                 "install -Dm755 anydesk.sh /app/bin/anydesk",
-                "for size in 16 24 32 48 64 128 256; do
+                "for size in 16 24 32 48 64 128 256 512; do
                     rsvg-convert -w $size -h $size -f png -o $size.png anydesk.svg
                     install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.anydesk.Anydesk.png
                 done",
@@ -82,9 +92,9 @@
                     "commands": [
                         "tar -xf anydesk.tar.gz",
                         "rm -f anydesk.tar.gz",
-                        "mv anydesk-2.9.5/* .",
+                        "mv anydesk-2.9.6/* .",
                         "chmod 755 anydesk",
-                        "rm -rf anydesk-2.9.5"
+                        "rm -rf anydesk-2.9.6"
                     ]
                 },
                 {
@@ -108,17 +118,17 @@
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
                     "only-arches": ["x86_64"],
-                    "url": "https://download.anydesk.com/linux/anydesk-2.9.5-amd64.tar.gz",
-                    "sha256": "2c910ec3c4bbaa5e61ae11f86a1753362bd1cfc9a2bc988d010e05d00d04434a",
-                    "size": 3125074
+                    "url": "https://download.anydesk.com/linux/anydesk-2.9.6-amd64.tar.gz",
+                    "sha256": "2c89d7a13734a9125d154a40f3809c407649878a17e98f30996845082bf6e6c9",
+                    "size": 3449677
                 },
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
                     "only-arches": ["i386"],
-                    "url": "https://download.anydesk.com/linux/anydesk-2.9.5-i686.tar.gz",
-                    "sha256": "ae2c79c825fab27935053ff81252d14a72cc4eba22cf2f3725bb14e1c09dbe14",
-                    "size": 3052022
+                    "url": "https://download.anydesk.com/linux/anydesk-2.9.6-i686.tar.gz",
+                    "sha256": "05b9b97f728033e54569b9b9693121e6c36425f6ac187b632b0cd346de27a440",
+                    "size": 3434554
                 }
             ]
         }

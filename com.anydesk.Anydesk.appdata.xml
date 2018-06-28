@@ -14,12 +14,16 @@
   </description>
   <screenshots>
     <screenshot>
-      <image type="source">https://anydesk.com/files/anydesk/press/AnyDesk%20-%20en_accept_window_incoming.PNG</image>
+      <image type="source">https://anydesk.com/media/images/image-sshot-linux-main-en_scXhgcK.width-990.png</image>
     </screenshot>
   </screenshots>
   <categories>
     <category>Network</category>
   </categories>
+      <releases>
+        <release date="2018-06-14" version="2.9.6"/>
+        <release date="2017-09-14" version="2.9.5"/>
+  </releases>
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/bpm79oQCS4VMwIG-jajHfpsIhsUodP5fHDa3V2cMXLiwkSscAAviezm9YlmSxgjkB-A=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/bpm79oQCS4VMwIG-jajHfpsIhsUodP5fHDa3V2cMXLiwkSscAAviezm9YlmSxgjkB-A=w128</icon>
   <content_rating type="oars-1.1">

@@ -50,7 +50,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/Archive/gtkglext",
+                    "url": "https://gitlab.gnome.org/Archive/gtkglext.git",
                     "commit": "04131c5f69070b2f194f02edd45b0622ca03793c"
                 }
             ]

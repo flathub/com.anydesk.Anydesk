@@ -34,17 +34,7 @@
                 }
             ]
         },
-        {
-            "name": "glu",
-            "sources": [
-              {
-                "type": "archive",
-                "url": "https://mesa.freedesktop.org/archive/glu/glu-9.0.0.tar.bz2",
-                "sha256": "1f7ad0d379a722fcbd303aa5650c6d7d5544fde83196b42a73d1193568a4df12"
-              }
-            ],
-            "cleanup": [ "/include", "/lib/*.a", "/lib/*.la", "/lib/pkgconfig" ]
-        },
+        "shared-modules/glu/glu-9.0.0.json",
         {
             "name": "gtkglext",
             "build-commands": [
@@ -56,7 +46,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://downloads.sourceforge.net/sourceforge/gtkglext/gtkglext-1.2.0.tar.bz2",
+                    "url": "https://download.gnome.org/sources/gtkglext/1.2/gtkglext-1.2.0.tar.bz2",
                     "sha256": "16bd736074f6b14180f206b7e91263fc721b49912ea3258ab5f094cfa5497f51"
                 },
                 {
@@ -84,7 +74,6 @@
                 }
             ]
         },
-
         {
             "name": "anydesk",
             "buildsystem": "simple",

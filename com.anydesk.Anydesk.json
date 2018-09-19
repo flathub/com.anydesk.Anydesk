@@ -1,7 +1,7 @@
 {
     "app-id": "com.anydesk.Anydesk",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "command": "anydesk",
     "separate-locales": false,
@@ -35,23 +35,60 @@
             ]
         },
         {
-            "name": "glu",
-            "sources": [
-              {
-                "type": "archive",
-                "url": "https://mesa.freedesktop.org/archive/glu/glu-9.0.0.tar.bz2",
-                "sha256": "1f7ad0d379a722fcbd303aa5650c6d7d5544fde83196b42a73d1193568a4df12"
-              }
+            "name" : "polkit",
+            "config-opts" : [
+                "--disable-polkitd",
+                "--disable-man-pages",
+                "--disable-introspection"
             ],
-            "cleanup": [ "/include", "/lib/*.a", "/lib/*.la", "/lib/pkgconfig" ]
+            "rm-configure" : true,
+            "cleanup" : [
+                "/bin/*",
+                "/etc/pam.d",
+                "/etc/dbus-1",
+                "/share/dbus-1/system-services/*",
+                "/share/polkit-1/actions/*",
+                "/lib/polkit-1"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "http://www.freedesktop.org/software/polkit/releases/polkit-0.113.tar.gz",
+                    "sha256" : "e1c095093c654951f78f8618d427faf91cf62abdefed98de40ff65eca6413c81"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "polkit-build-Add-option-to-build-without-polkitd.patch"
+                },
+                {
+                    "type" : "file",
+                    "path" : "polkit-autogen",
+                    "dest-filename" : "autogen.sh"
+                }
+            ]
         },
+        "shared-modules/glu/glu-9.0.0.json",
         {
             "name": "gtkglext",
+            "build-commands": [
+              "sed '/AC_PATH_XTRA/d' -i configure.in",
+             "./configure --prefix=/app --disable-static",
+              "make",
+              "make install"
+            ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/Archive/gtkglext.git",
-                    "commit": "04131c5f69070b2f194f02edd45b0622ca03793c"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtkglext/1.2/gtkglext-1.2.0.tar.bz2",
+                    "sha256": "16bd736074f6b14180f206b7e91263fc721b49912ea3258ab5f094cfa5497f51"
+                },
+                {
+                  "type": "patch",
+                  "path": "gtk2.20.patch"
+                },
+                {
+                  "type": "patch",
+                  "path": "gtkglext-gcc8.patch"
                 }
             ]
         },
@@ -70,7 +107,6 @@
                 }
             ]
         },
-        
         {
             "name": "anydesk",
             "buildsystem": "simple",
@@ -92,9 +128,9 @@
                     "commands": [
                         "tar -xf anydesk.tar.gz",
                         "rm -f anydesk.tar.gz",
-                        "mv anydesk-2.9.6/* .",
+                        "mv anydesk-4.0.0/* .",
                         "chmod 755 anydesk",
-                        "rm -rf anydesk-2.9.6"
+                        "rm -rf anydesk-4.0.0"
                     ]
                 },
                 {
@@ -118,17 +154,17 @@
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
                     "only-arches": ["x86_64"],
-                    "url": "https://download.anydesk.com/linux/anydesk-2.9.6-amd64.tar.gz",
-                    "sha256": "2c89d7a13734a9125d154a40f3809c407649878a17e98f30996845082bf6e6c9",
-                    "size": 3449677
+                    "url": "https://download.anydesk.com/linux/anydesk-4.0.0-amd64.tar.gz",
+                    "sha256": "3df9c09fc197c2b84c988bb090958c6a8d6f42db26991a86ec488e638618664c",
+                    "size": 3657392
                 },
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
                     "only-arches": ["i386"],
-                    "url": "https://download.anydesk.com/linux/anydesk-2.9.6-i686.tar.gz",
-                    "sha256": "05b9b97f728033e54569b9b9693121e6c36425f6ac187b632b0cd346de27a440",
-                    "size": 3434554
+                    "url": "https://download.anydesk.com/linux/anydesk-4.0.0-i686.tar.gz",
+                    "sha256": "5f7bffc7fb41b37eb7e5c24bff5000b902f22d6c31be7c97f9d236259a196ecb",
+                    "size": 3651014
                 }
             ]
         }

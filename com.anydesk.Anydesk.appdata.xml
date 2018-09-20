@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>com.anydesk.Anydesk.desktop</id>
-  <name>Anydesk</name>
+  <name>AnyDesk</name>
   <project_license>LicenseRef-proprietary</project_license>
-  <developer_name>Anydesk</developer_name>
+  <developer_name>AnyDesk</developer_name>
   <summary>Connect to a computer remotely</summary>
   <summary xml:lang="pt_BR">Conectar com um computador remotamente</summary>
   <summary xml:lang="es">Conéctese a un ordenador de forma remota</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://www.anydesk.com</url>
   <description><p>AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.</description>
-  <description xml:lang="pt_BR">A AnyDesk assegura ligações de computador remoto seguras e fiáveis tanto para profissionais de TI como para pessoas em viagem.<p></p></description>
+  <description xml:lang="pt_BR"><p>A AnyDesk assegura ligações de computador remoto seguras e fiáveis tanto para profissionais de TI como para pessoas em viagem.</description>
   <description xml:lang="es"><p></p>Gracias a AnyDesk, contará con conexiones seguras y fiables de escritorio remoto para profesionales informáticos y usuarios en movimiento.</description>
   <screenshots>
     <screenshot>
-      <image type="source">https://anydesk.com/media/images/image-sshot-linux-main-en_scXhgcK.width-990.png</image>
+      <image type="source">https://anydesk.pt/media/images/image-sshot-windows-main-en.width-990.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://anydesk.pt/media/images/image-sshot-windows-connect-en.width-990.png</image>
+    </screenshot>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://anydesk.pt/media/images/image-sshot-windows-session-en.width-990.png</image>
+    </screenshot>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://anydesk.pt/media/images/image-sshot-windows-abook-en.width-990.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://anydesk.pt/media/images/image-sshot-windows-filetransfer-en.width-990.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://anydesk.pt/media/images/image-sshot-windows-settings-en.width-990.png</image>
     </screenshot>
   </screenshots>
   <categories>

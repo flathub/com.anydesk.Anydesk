@@ -1,7 +1,7 @@
 {
     "app-id": "com.anydesk.Anydesk",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.30",
     "sdk": "org.gnome.Sdk",
     "command": "anydesk",
     "separate-locales": false,
@@ -154,17 +154,17 @@
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
                     "only-arches": ["x86_64"],
-                    "url": "https://download.anydesk.com/linux/anydesk-4.0.0-amd64.tar.gz",
-                    "sha256": "3df9c09fc197c2b84c988bb090958c6a8d6f42db26991a86ec488e638618664c",
-                    "size": 3657392
+                    "url": "https://download.anydesk.com/linux/anydesk-4.0.1-amd64.tar.gz",
+                    "sha256": "c20b2bc265846563fb64bdb073279e651c34c43dd84b9169b5615d9b9eee6d22",
+                    "size": 3663439
                 },
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
                     "only-arches": ["i386"],
-                    "url": "https://download.anydesk.com/linux/anydesk-4.0.0-i686.tar.gz",
-                    "sha256": "5f7bffc7fb41b37eb7e5c24bff5000b902f22d6c31be7c97f9d236259a196ecb",
-                    "size": 3651014
+                    "url": "https://download.anydesk.com/linux/anydesk-4.0.1-i686.tar.gz",
+                    "sha256": "029e97ff8d1be50b2d439dfc832d8d8a1e7df8e8099f96fd9b737d3204692587",
+                    "size": 3658518
                 }
             ]
         }

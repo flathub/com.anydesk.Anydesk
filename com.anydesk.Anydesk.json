@@ -102,8 +102,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.5.6.tar.xz",
-                    "sha256": "f346eeb90cce0910c05b877fe49eadc760fa084c0455fd313e39d4b2c2d4bb21"
+                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.6.2.tar.xz",
+                    "sha256": "db452ec986edefd88af0d222d22f6102f8030a8633fdfe846c3ae4bde9bb93f3"
                 }
             ]
         },

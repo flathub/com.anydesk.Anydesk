@@ -5,9 +5,12 @@
     "sdk": "org.gnome.Sdk",
     "command": "anydesk",
     "separate-locales": false,
-    "tags": ["proprietary"],
+    "tags": [
+        "proprietary"
+    ],
     "finish-args": [
-        "--share=ipc", "--socket=x11",
+        "--share=ipc",
+        "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--device=dri",
@@ -35,14 +38,14 @@
             ]
         },
         {
-            "name" : "polkit",
-            "config-opts" : [
+            "name": "polkit",
+            "config-opts": [
                 "--disable-polkitd",
                 "--disable-man-pages",
                 "--disable-introspection"
             ],
-            "rm-configure" : true,
-            "cleanup" : [
+            "rm-configure": true,
+            "cleanup": [
                 "/bin/*",
                 "/etc/pam.d",
                 "/etc/dbus-1",
@@ -50,20 +53,20 @@
                 "/share/polkit-1/actions/*",
                 "/lib/polkit-1"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "http://www.freedesktop.org/software/polkit/releases/polkit-0.113.tar.gz",
-                    "sha256" : "e1c095093c654951f78f8618d427faf91cf62abdefed98de40ff65eca6413c81"
+                    "type": "archive",
+                    "url": "http://www.freedesktop.org/software/polkit/releases/polkit-0.113.tar.gz",
+                    "sha256": "e1c095093c654951f78f8618d427faf91cf62abdefed98de40ff65eca6413c81"
                 },
                 {
-                    "type" : "patch",
-                    "path" : "polkit-build-Add-option-to-build-without-polkitd.patch"
+                    "type": "patch",
+                    "path": "polkit-build-Add-option-to-build-without-polkitd.patch"
                 },
                 {
-                    "type" : "file",
-                    "path" : "polkit-autogen",
-                    "dest-filename" : "autogen.sh"
+                    "type": "file",
+                    "path": "polkit-autogen",
+                    "dest-filename": "autogen.sh"
                 }
             ]
         },
@@ -71,10 +74,10 @@
         {
             "name": "gtkglext",
             "build-commands": [
-              "sed '/AC_PATH_XTRA/d' -i configure.in",
-             "./configure --prefix=/app --disable-static",
-              "make",
-              "make install"
+                "sed '/AC_PATH_XTRA/d' -i configure.in",
+                "./configure --prefix=/app --disable-static",
+                "make",
+                "make install"
             ],
             "sources": [
                 {
@@ -83,18 +86,18 @@
                     "sha256": "16bd736074f6b14180f206b7e91263fc721b49912ea3258ab5f094cfa5497f51"
                 },
                 {
-                  "type": "patch",
-                  "path": "gtk2.20.patch"
+                    "type": "patch",
+                    "path": "gtk2.20.patch"
                 },
                 {
-                  "type": "patch",
-                  "path": "gtkglext-gcc8.patch"
+                    "type": "patch",
+                    "path": "gtkglext-gcc8.patch"
                 }
             ]
         },
         {
             "name": "pciutils",
-            "buildsystem":"simple",
+            "buildsystem": "simple",
             "build-commands": [
                 "make",
                 "make PREFIX=/app SBINDIR=/app/bin install"
@@ -113,15 +116,12 @@
             "build-commands": [
                 "install -Dm755 apply_extra /app/bin/apply_extra",
                 "install -Dm755 anydesk.sh /app/bin/anydesk",
-                "for size in 16 24 32 48 64 128 256 512; do
-                    rsvg-convert -w $size -h $size -f png -o $size.png anydesk.svg
-                    install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.anydesk.Anydesk.png
-                done",
+                "for size in 16 24 32 48 64 128 256 512; do\n                    rsvg-convert -w $size -h $size -f png -o $size.png anydesk.svg\n                    install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.anydesk.Anydesk.png\n                done",
                 "install -Dm644 anydesk.svg export/share/icons/hicolor/scalable/apps/com.anydesk.Anydesk.svg",
                 "install -Dm644 com.anydesk.Anydesk.appdata.xml /app/share/appdata/com.anydesk.Anydesk.appdata.xml",
                 "install -Dm644 com.anydesk.Anydesk.desktop /app/share/applications/com.anydesk.Anydesk.desktop"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "script",
                     "dest-filename": "apply_extra",
@@ -136,7 +136,9 @@
                 {
                     "type": "script",
                     "dest-filename": "anydesk.sh",
-                    "commands": ["exec /app/extra/anydesk \"$@\""]
+                    "commands": [
+                        "exec /app/extra/anydesk \"$@\""
+                    ]
                 },
                 {
                     "type": "file",
@@ -153,7 +155,9 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "only-arches": ["x86_64"],
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "url": "https://download.anydesk.com/linux/anydesk-5.1.1-amd64.tar.gz",
                     "sha256": "cb72b79ac1476bfb295f3e27d2127d4868107e324f6473b089b448c7f3df55a4",
                     "size": 4504909,
@@ -167,7 +171,9 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "only-arches": ["i386"],
+                    "only-arches": [
+                        "i386"
+                    ],
                     "url": "https://download.anydesk.com/linux/anydesk-5.1.1-i686.tar.gz",
                     "sha256": "87d9a4ccfa6e46c7174e943453fc97418c73b6b8255631f36e9def3bc3fe6b82",
                     "size": 4498956,
@@ -177,7 +183,6 @@
                         "url-pattern": "(https://download.anydesk.com/linux/anydesk-([0-9.]+)-i386.tar.gz)",
                         "version-pattern": "https://download.anydesk.com/linux/anydesk-([0-9.]+)-i386.tar.gz"
                     }
-
                 }
             ]
         }

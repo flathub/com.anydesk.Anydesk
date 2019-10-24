@@ -126,11 +126,9 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "tar -xf anydesk.tar.gz",
+                        "tar --strip-components=1 -xf anydesk.tar.gz",
                         "rm -f anydesk.tar.gz",
-                        "mv anydesk-5.1.1/* .",
-                        "chmod 755 anydesk",
-                        "rm -rf anydesk-5.1.1"
+                        "chmod 755 anydesk"
                     ]
                 },
                 {

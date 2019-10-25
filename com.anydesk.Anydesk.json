@@ -156,9 +156,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://download.anydesk.com/linux/generic-linux/anydesk-5.1.2-amd64.tar.gz",
-                    "sha256": "02d98ca58dfa053d5dc59fb198992a3066ebd66b9faff8948421d233b5e03d56",
-                    "size": 4502952,
+                    "url": "https://download.anydesk.com/linux/anydesk-5.4.0-amd64.tar.gz",
+                    "sha256": "0b4b619d4c2aeed17afdfff8e385f4ac1030bb5500ce5ef36732361e2a3cede1",
+                    "size": 4536616,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",
@@ -172,9 +172,9 @@
                     "only-arches": [
                         "i386"
                     ],
-                    "url": "https://download.anydesk.com/linux/generic-linux/anydesk-5.1.2-i386.tar.gz",
-                    "sha256": "6ca826ead232e9bd54fb445524ab5efee5df7edd84fc90cd30567b54376950bf",
-                    "size": 4498951,
+                    "url": "https://download.anydesk.com/linux/anydesk-5.4.0-i386.tar.gz",
+                    "sha256": "cf99214e166be2fd6b289a486d4651825a61fc9f8767c6ed85a3d68f65ce8896",
+                    "size": 4532854,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",

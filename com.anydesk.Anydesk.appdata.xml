@@ -21,6 +21,7 @@
     <category>Network</category>
   </categories>
       <releases>
+        <release version="5.4.1" date="2019-10-31"/>
         <release version="5.4.0" date="2019-10-24"/>
         <release version="5.1.2" date="2019-08-21"/>
         <release date="2019-06-13" version="5.1.1"/>

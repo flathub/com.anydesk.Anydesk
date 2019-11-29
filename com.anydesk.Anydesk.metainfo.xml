@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>com.anydesk.Anydesk.desktop</id>
-  <name>Anydesk</name>
+  <name>AnyDesk</name>
   <project_license>LicenseRef-proprietary</project_license>
   <developer_name>AnyDesk Software GmbH</developer_name>
   <metadata_license>CC0-1.0</metadata_license>

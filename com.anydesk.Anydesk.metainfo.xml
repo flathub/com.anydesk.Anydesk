@@ -3,15 +3,16 @@
   <id>com.anydesk.Anydesk.desktop</id>
   <name>Anydesk</name>
   <project_license>LicenseRef-proprietary</project_license>
-  <developer_name>Anydesk</developer_name>
-  <summary>Your desk at any desk</summary>
+  <developer_name>AnyDesk Software GmbH</developer_name>
   <metadata_license>CC0-1.0</metadata_license>
+  <summary>Connect to a computer remotely</summary>
+  <summary xml:lang="pt_BR">Conectar com um computador remotamente</summary>
+  <summary xml:lang="es">Conéctese a un ordenador de forma remota</summary>  <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://www.anydesk.com</url>
-  <description>
-    <p>Working together? Accessing your apps from the road? Showing family videos to your friends?
-    No problem with AnyDesk. And your data stays at home.</p>
-    <p>AnyDesk is the fastest remote desktop software on the market. It allows for new usage scenarios and applications that have not been possible with current remote desktop software.</p>
-  </description>
+  <url type="bugtracker">https://github.com/flathub/com.anydesk.Anydesk/issues</url>
+  <description><p>AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.</p><p>NOTE: This wrapper is not verified by, affiliated with, or supported by AnyDesk.</p></description>
+  <description xml:lang="pt_BR"><p>A AnyDesk assegura ligações de computador remoto seguras e fiáveis tanto para profissionais de TI como para pessoas em viagem.</p><p>NOTA: Este aplicativo não foi empacotado pelo AnyDesk</p></description>
+  <description xml:lang="es"><p>Gracias a AnyDesk, contará con conexiones seguras y fiables de escritorio remoto para profesionales informáticos y usuarios en movimiento.</p><p>NOTA: Esta aplicación no ha sido empaquetado por AnyDesk</p></description>
   <screenshots>
     <screenshot>
       <image type="source">https://anydesk.com/_static/img/screenshots/anydesk-v5-linux-main-screen-en-2e1b4e.png</image>

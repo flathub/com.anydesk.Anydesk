@@ -3,7 +3,7 @@
   <id>com.anydesk.Anydesk.desktop</id>
   <name>AnyDesk</name>
   <project_license>LicenseRef-proprietary</project_license>
-  <developer_name>AnyDesk</developer_name>
+  <developer_name>AnyDesk Software GmbH</developer_name>
   <summary>Connect to a computer remotely</summary>
   <summary xml:lang="pt_BR">Conectar com um computador remotamente</summary>
   <summary xml:lang="es">Conéctese a un ordenador de forma remota</summary>

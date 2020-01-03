@@ -154,7 +154,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "com.anydesk.Anydesk.metainfo.xml"
+                    "path": "com.anydesk.Anydesk.appdata.xml"
                 },
                 {
                     "type": "file",

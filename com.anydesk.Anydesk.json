@@ -176,7 +176,7 @@
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",
-                        "url-pattern": "(https://download.anydesk.com/linux/anydesk-([0-9.]+)-amd64.tar.gz)",
+                        "url-pattern": "(https://download.anydesk.com/linux/anydesk-[0-9.]+-amd64.tar.gz)",
                         "version-pattern": "https://download.anydesk.com/linux/anydesk-([0-9.]+)-amd64.tar.gz"
                     }
                 },
@@ -192,7 +192,7 @@
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",
-                        "url-pattern": "(https://download.anydesk.com/linux/anydesk-([0-9.]+)-i386.tar.gz)",
+                        "url-pattern": "(https://download.anydesk.com/linux/anydesk-[0-9.]+-i386.tar.gz)",
                         "version-pattern": "https://download.anydesk.com/linux/anydesk-([0-9.]+)-i386.tar.gz"
                     }
                 }

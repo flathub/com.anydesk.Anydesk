@@ -170,9 +170,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://download.anydesk.com/linux/anydesk-6.0.0-amd64.tar.gz",
-                    "sha256": "9df6583097865591d153853f730f02dde003756dd5840dc670d25f3c275d86a5",
-                    "size": 5195378,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.0.1-amd64.tar.gz",
+                    "sha256": "b7826dcd379c27f615424d36d9383b8033c0b8c221751cad4ae7d9809f0fe5a4",
+                    "size": 5209989,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",
@@ -186,9 +186,9 @@
                     "only-arches": [
                         "i386"
                     ],
-                    "url": "https://download.anydesk.com/linux/anydesk-6.0.0-i386.tar.gz",
-                    "sha256": "369ed52f4876f29ea4d3713401493e28fa21749bc0f24f0809e5b770c93e8c37",
-                    "size": 5116771,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.0.1-i386.tar.gz",
+                    "sha256": "cb22b026e2d81c0de220238fa3d4e13a6d0016787b8c680923794296bbd548e2",
+                    "size": 5130077,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",

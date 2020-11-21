@@ -1,7 +1,7 @@
 {
     "app-id": "com.anydesk.Anydesk",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.38",
     "sdk": "org.gnome.Sdk",
     "command": "anydesk",
     "separate-locales": false,
@@ -17,6 +17,7 @@
         "--filesystem=home"
     ],
     "modules": [
+        "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "libxmu",
             "sources": [
@@ -30,19 +31,33 @@
         {
             "name": "pangox-compat",
             "sources": [
+                {                    
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/Archive/pangox-compat",
+                    "commit" : "edb9e0904d04d1da02bba7b78601a2aba05aaa47"
+                },
                 {
-                    "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/pangox-compat/0.0/pangox-compat-0.0.2.tar.xz",
-                    "sha256": "552092b3b6c23f47f4beee05495d0f9a153781f62a1c4b7ec53857a37dfce046"
+                    "type" : "patch",
+                    "path" : "0001-Re-add-pango_x_get_shaper_map-it-is-still-used-in-th.patch"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "0002-disable-shaper.patch"
                 }
             ]
-        },
+        },        
         {
             "name": "polkit",
             "config-opts": [
                 "--disable-polkitd",
                 "--disable-man-pages",
-                "--disable-introspection"
+                "--disable-introspection",
+                "--disable-examples",
+                "--disable-gtk-doc",
+                "--disable-libelogind",
+                "--disable-libsystemd-login",
+                "--with-systemdsystemunitdir=no",
+                "--with-authdb=dummy"
             ],
             "rm-configure": true,
             "cleanup": [
@@ -50,14 +65,15 @@
                 "/etc/pam.d",
                 "/etc/dbus-1",
                 "/share/dbus-1/system-services/*",
+                "/share/polkit-1",
                 "/share/polkit-1/actions/*",
                 "/lib/polkit-1"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://www.freedesktop.org/software/polkit/releases/polkit-0.113.tar.gz",
-                    "sha256": "e1c095093c654951f78f8618d427faf91cf62abdefed98de40ff65eca6413c81"
+                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-0.116.tar.gz",
+                    "sha256": "88170c9e711e8db305a12fdb8234fac5706c61969b94e084d0f117d8ec5d34b1"
                 },
                 {
                     "type": "patch",
@@ -70,7 +86,8 @@
                 }
             ]
         },
-        "shared-modules/glu/glu-9.0.0.json",
+        "shared-modules/gtk2/gtk2.json",
+        "shared-modules/glu/glu-9.json",
         {
             "name": "gtkglext",
             "build-commands": [
@@ -92,6 +109,10 @@
                 {
                     "type": "patch",
                     "path": "gtkglext-gcc8.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "x11-libs_gtkglext_files_gtkglext-1.2.0-no-pangox.patch"
                 }
             ]
         },

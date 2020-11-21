@@ -1,0 +1,164 @@
+diff --git a/configure b/configure
+index b4a6bdd..89be75b 100755
+--- a/configure
++++ b/configure
+@@ -19880,14 +19880,12 @@ if test -n "$PKG_CONFIG"; then
+ gtk+-2.0 >= 2.0.0 \\
+ gdk-2.0 >= 2.0.0 \\
+ pango >= 1.0.0 \\
+-pangox >= 1.0.0 \\
+ gmodule-2.0 >= 2.0.0 \\
+ \"") >&5
+   ($PKG_CONFIG --exists --print-errors "\
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ ") 2>&5
+   ac_status=$?
+@@ -19897,7 +19895,6 @@ gmodule-2.0 >= 2.0.0 \
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ " 2>/dev/null`
+ else
+@@ -19916,14 +19913,12 @@ if test -n "$PKG_CONFIG"; then
+ gtk+-2.0 >= 2.0.0 \\
+ gdk-2.0 >= 2.0.0 \\
+ pango >= 1.0.0 \\
+-pangox >= 1.0.0 \\
+ gmodule-2.0 >= 2.0.0 \\
+ \"") >&5
+   ($PKG_CONFIG --exists --print-errors "\
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ ") 2>&5
+   ac_status=$?
+@@ -19933,7 +19928,6 @@ gmodule-2.0 >= 2.0.0 \
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ " 2>/dev/null`
+ else
+@@ -19958,7 +19952,6 @@ fi
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ "`
+         else
+@@ -19966,7 +19959,6 @@ gmodule-2.0 >= 2.0.0 \
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ "`
+         fi
+@@ -19977,7 +19969,6 @@ gmodule-2.0 >= 2.0.0 \
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ ) were not met:
+ 
+@@ -19994,7 +19985,6 @@ echo "$as_me: error: Package requirements (\
+ gtk+-2.0 >= 2.0.0 \
+ gdk-2.0 >= 2.0.0 \
+ pango >= 1.0.0 \
+-pangox >= 1.0.0 \
+ gmodule-2.0 >= 2.0.0 \
+ ) were not met:
+ 
+@@ -25420,7 +25410,7 @@ LIBS="$save_LIBS"
+ # CFLAGS and LIBS
+ ##################################################
+ 
+-GDKGLEXT_PACKAGES="gdk-2.0 pango pangox gmodule-2.0"
++GDKGLEXT_PACKAGES="gdk-2.0 pango gmodule-2.0"
+ GDKGLEXT_EXTRA_CFLAGS="$GL_CFLAGS $GDKGLEXT_WIN_CFLAGS"
+ GDKGLEXT_EXTRA_LIBS="$GL_LIBS $GDKGLEXT_WIN_LIBS"
+ GDKGLEXT_DEP_CFLAGS="$GDKGLEXT_EXTRA_CFLAGS `$PKG_CONFIG --cflags $GDKGLEXT_PACKAGES`"
+diff --git a/configure.in b/configure.in
+index e5b678c..f4937d0 100644
+--- a/configure.in
++++ b/configure.in
+@@ -59,10 +59,6 @@ m4_define([gmodule_required_version], [2.0.0])
+ m4_define([pango_pkg], [pango])
+ m4_define([pango_required_version], [1.0.0])
+ 
+-# Pangox
+-m4_define([pangox_pkg], [pangox])
+-m4_define([pangox_required_version], [1.0.0])
+-
+ # PangoFT2
+ m4_define([pangoft2_pkg], [pangoft2])
+ m4_define([pangoft2_required_version], [1.0.0])
+@@ -349,7 +345,6 @@ PKG_CHECK_MODULES([BASE_DEPENDENCIES], [\
+ gtk_pkg >= gtk_required_version \
+ gdk_pkg >= gdk_required_version \
+ pango_pkg >= pango_required_version \
+-pangox_pkg >= pangox_required_version \
+ gmodule_pkg >= gmodule_required_version \
+ ])
+ 
+@@ -794,7 +789,7 @@ LIBS="$save_LIBS"
+ # CFLAGS and LIBS
+ ##################################################
+ 
+-GDKGLEXT_PACKAGES="gdk_pkg pango_pkg pangox_pkg gmodule_pkg"
++GDKGLEXT_PACKAGES="gdk_pkg pango_pkg gmodule_pkg"
+ GDKGLEXT_EXTRA_CFLAGS="$GL_CFLAGS $GDKGLEXT_WIN_CFLAGS"
+ GDKGLEXT_EXTRA_LIBS="$GL_LIBS $GDKGLEXT_WIN_LIBS"
+ GDKGLEXT_DEP_CFLAGS="$GDKGLEXT_EXTRA_CFLAGS `$PKG_CONFIG --cflags $GDKGLEXT_PACKAGES`"
+diff --git a/gdk/x11/gdkglfont-x11.c b/gdk/x11/gdkglfont-x11.c
+index d4ec881..cfd971e 100644
+--- a/gdk/x11/gdkglfont-x11.c
++++ b/gdk/x11/gdkglfont-x11.c
+@@ -18,7 +18,7 @@
+ 
+ #include <string.h>
+ 
+-#include <pango/pangox.h>
++//#include <pango/pangox.h>
+ 
+ #include "gdkglx.h"
+ #include "gdkglprivate-x11.h"
+@@ -77,9 +77,9 @@ gdk_gl_font_use_pango_font_common (PangoFontMap               *font_map,
+ {
+   PangoFont *font = NULL;
+   gchar *charset = NULL;
+-  PangoXSubfont subfont_id;
++  //PangoXSubfont subfont_id;
+   gchar *xlfd = NULL;
+-  PangoXFontCache *font_cache;
++  //PangoXFontCache *font_cache;
+   XFontStruct *fs;
+ 
+   GDK_GL_NOTE_FUNC_PRIVATE ();
+@@ -91,6 +91,7 @@ gdk_gl_font_use_pango_font_common (PangoFontMap               *font_map,
+       goto FAIL;
+     }
+ 
++  /*
+   charset = gdk_gl_font_charset_for_locale ();
+   if (!pango_x_find_first_subfont (font, &charset, 1, &subfont_id))
+     {
+@@ -114,6 +115,7 @@ gdk_gl_font_use_pango_font_common (PangoFontMap               *font_map,
+   glXUseXFont (fs->fid, first, count, list_base);
+ 
+   pango_x_font_cache_unload (font_cache, fs);
++  */
+ 
+  FAIL:
+ 

@@ -38,11 +38,10 @@
                 },
                 {
                     "type" : "patch",
-                    "path" : "0001-Re-add-pango_x_get_shaper_map-it-is-still-used-in-th.patch"
-                },
-                {
-                    "type" : "patch",
-                    "path" : "0002-disable-shaper.patch"
+                    "paths" : [
+                        "0001-Re-add-pango_x_get_shaper_map-it-is-still-used-in-th.patch",
+                        "0002-disable-shaper.patch"
+                    ]
                 }
             ]
         },        

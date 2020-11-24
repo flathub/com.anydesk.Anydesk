@@ -15,7 +15,7 @@
   <description xml:lang="es"><p>Gracias a AnyDesk, contará con conexiones seguras y fiables de escritorio remoto para profesionales informáticos y usuarios en movimiento.</p><p>NOTA: Esta aplicación no ha sido empaquetado por AnyDesk</p></description>
   <screenshots>
     <screenshot>
-      <image type="source">https://anydesk.com/_static/img/screenshots/anydesk-v5-linux-main-screen-en-2e1b4e.png</image>
+      <image type="source">https://github.com/flathub/com.anydesk.Anydesk/raw/b27de5e35d6651a35a2ea8e2568dfc4d021c4b0c/Screenshots/anydesk-v5-linux-main-screen-en-2e1b4e.png</image>
     </screenshot>
   </screenshots>
   <categories>

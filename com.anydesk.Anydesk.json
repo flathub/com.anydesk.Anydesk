@@ -148,7 +148,7 @@
                 "install -Dm755 anydesk.sh /app/bin/anydesk",
                 "for size in 16 24 32 48 64 128 256 512; do\n                    rsvg-convert -w $size -h $size -f png -o $size.png anydesk.svg\n                    install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.anydesk.Anydesk.png\n                done",
                 "install -Dm644 anydesk.svg export/share/icons/hicolor/scalable/apps/com.anydesk.Anydesk.svg",
-                "install -Dm644 com.anydesk.Anydesk.appdata.xml /app/share/appdata/com.anydesk.Anydesk.appdata.xml",
+                "install -Dm644 com.anydesk.Anydesk.metainfo.xml /app/share/metainfo/com.anydesk.Anydesk.metainfo.xml",
                 "install -Dm644 com.anydesk.Anydesk.desktop /app/share/applications/com.anydesk.Anydesk.desktop"
             ],
             "sources": [

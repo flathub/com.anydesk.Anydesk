@@ -170,7 +170,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "com.anydesk.Anydesk.appdata.xml"
+                    "path": "com.anydesk.Anydesk.metainfo.xml"
                 },
                 {
                     "type": "file",

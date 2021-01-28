@@ -31,20 +31,20 @@
         {
             "name": "pangox-compat",
             "sources": [
-                {                    
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/Archive/pangox-compat",
-                    "commit" : "edb9e0904d04d1da02bba7b78601a2aba05aaa47"
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/Archive/pangox-compat",
+                    "commit": "edb9e0904d04d1da02bba7b78601a2aba05aaa47"
                 },
                 {
-                    "type" : "patch",
-                    "paths" : [
+                    "type": "patch",
+                    "paths": [
                         "0001-Re-add-pango_x_get_shaper_map-it-is-still-used-in-th.patch",
                         "0002-disable-shaper.patch"
                     ]
                 }
             ]
-        },        
+        },
         {
             "name": "polkit",
             "config-opts": [
@@ -102,8 +102,8 @@
                     "sha256": "16bd736074f6b14180f206b7e91263fc721b49912ea3258ab5f094cfa5497f51"
                 },
                 {
-                    "type" : "patch",                    
-                    "paths" : [
+                    "type": "patch",
+                    "paths": [
                         "gtk2.20.patch",
                         "gtkglext-gcc8.patch",
                         "x11-libs_gtkglext_files_gtkglext-1.2.0-no-pangox.patch"
@@ -186,9 +186,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://download.anydesk.com/linux/anydesk-6.0.1-amd64.tar.gz",
-                    "sha256": "b7826dcd379c27f615424d36d9383b8033c0b8c221751cad4ae7d9809f0fe5a4",
-                    "size": 5209989,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.1.0-amd64.tar.gz",
+                    "sha256": "797808eb2cf39a5cb91a268a2597188e2f5232e2f47914f5bd4a5ae5413678e1",
+                    "size": 5264850,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",

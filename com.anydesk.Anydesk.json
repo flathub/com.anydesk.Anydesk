@@ -175,7 +175,7 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "tar --strip-components=1 -xf anydesk.tar.gz",
+                        "tar --strip-components=1 -xf anydesk.tar.gz --no-same-owner",
                         "rm -f anydesk.tar.gz",
                         "chmod 755 anydesk"
                     ]

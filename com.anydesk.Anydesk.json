@@ -90,8 +90,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-0.116.tar.gz",
-                    "sha256": "88170c9e711e8db305a12fdb8234fac5706c61969b94e084d0f117d8ec5d34b1"
+                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-0.120.tar.gz",
+                    "sha256": "ee7a599a853117bf273548725719fa92fabd2f136915c7a4906cee98567aee03"
                 },
                 {
                     "type": "patch",

@@ -99,8 +99,7 @@
             ],
             "sources": [
                 {
-                    "//": {
-                        "//": "TODO: patch does not apply against polkit 0.120. https://gitlab.freedesktop.org/polkit/polkit/-/issues/162",
+                    "x-checker-data": {
                         "type": "anitya",
                         "project-id": 3682,
                         "url-template": "https://www.freedesktop.org/software/polkit/releases/polkit-$version.tar.gz"

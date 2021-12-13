@@ -1,7 +1,7 @@
 {
     "app-id": "com.anydesk.Anydesk",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "anydesk",
     "separate-locales": false,
@@ -140,8 +140,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.5.6.tar.xz",
-                    "sha256": "f346eeb90cce0910c05b877fe49eadc760fa084c0455fd313e39d4b2c2d4bb21"
+                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.7.0.tar.xz",
+                    "sha256": "9d40b97be8b6a2cdf96aead5a61881d1f7e4e0da9544a9bac4fba1ae9dcd40eb"
                 }
             ]
         },

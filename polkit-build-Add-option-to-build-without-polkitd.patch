@@ -1,32 +1,18 @@
-From 1073a44277316348d40d86ecec908f1d4812f360 Mon Sep 17 00:00:00 2001
-From: Christian Hergert <chergert@redhat.com>
-Date: Mon, 27 May 2019 11:49:09 -0700
-Subject: [PATCH] flatpak: make polkit suitable for use within flatpak
-
-This is based on patches from Patrick Griffis with additional fixes
-to allow us to disable use of PAM within Flaptak.
----
- configure.ac                | 20 ++++++++++++++++----
- src/Makefile.am             |  6 +++++-
- src/polkitagent/Makefile.am |  5 +++++
- test/Makefile.am            |  6 +++++-
- 4 files changed, 31 insertions(+), 6 deletions(-)
-
-diff --git a/configure.ac b/configure.ac
-index 5cedb4e..729d78d 100644
---- a/configure.ac
-+++ b/configure.ac
-@@ -79,11 +79,13 @@ PKG_CHECK_MODULES(GLIB, [gmodule-2.0 gio-unix-2.0 >= 2.30.0])
+diff -ru orig/configure.ac diff/configure.ac
+--- orig/configure.ac	2021-09-29 21:16:29.000000000 +0200
++++ diff/configure.ac	2021-12-13 16:02:13.112448525 +0100
+@@ -80,11 +80,13 @@
  AC_SUBST(GLIB_CFLAGS)
  AC_SUBST(GLIB_LIBS)
  
--PKG_CHECK_MODULES(LIBJS, [mozjs-60])
-+AS_IF([test x${enable_polkitd} = yes], [
-+  PKG_CHECK_MODULES(LIBJS, [mozjs-60])
- 
+-PKG_CHECK_MODULES(LIBJS, [mozjs-78])
+-
 -AC_SUBST(LIBJS_CFLAGS)
 -AC_SUBST(LIBJS_CXXFLAGS)
 -AC_SUBST(LIBJS_LIBS)
++AS_IF([test x${enable_polkitd} = yes], [
++  PKG_CHECK_MODULES(LIBJS, [mozjs-78])
++
 +  AC_SUBST(LIBJS_CFLAGS)
 +  AC_SUBST(LIBJS_CXXFLAGS)
 +  AC_SUBST(LIBJS_LIBS)
@@ -34,11 +20,10 @@ index 5cedb4e..729d78d 100644
  
  EXPAT_LIB=""
  AC_ARG_WITH(expat, [  --with-expat=<dir>      Use expat from here],
-@@ -236,6 +238,15 @@ if test "x$with_systemdsystemunitdir" != "xno"; then
- fi
+@@ -238,6 +240,15 @@
  AM_CONDITIONAL(HAVE_SYSTEMD, [test -n "$systemdsystemunitdir"])
  
-+dnl ---------------------------------------------------------------------------
+ dnl ---------------------------------------------------------------------------
 +dnl - Disable polkitd when using library alone
 +dnl ---------------------------------------------------------------------------
 +
@@ -47,10 +32,11 @@ index 5cedb4e..729d78d 100644
 +              [enable_polkitd=$enableval], [enable_polkitd=yes])
 +AM_CONDITIONAL(BUILD_POLKITD, [test x${enable_polkitd} = yes])
 +
- dnl ---------------------------------------------------------------------------
++dnl ---------------------------------------------------------------------------
  dnl - User for running polkitd
  dnl ---------------------------------------------------------------------------
-@@ -579,6 +590,7 @@ echo "
+
+@@ -584,6 +595,7 @@
          Session tracking:           ${SESSION_TRACKING}
          PAM support:                ${have_pam}
          systemdsystemunitdir:       ${systemdsystemunitdir}
@@ -58,10 +44,9 @@ index 5cedb4e..729d78d 100644
          polkitd user:               ${POLKITD_USER}"
  
  if test "$have_pam" = yes ; then
-diff --git a/src/Makefile.am b/src/Makefile.am
-index 09fc7b3..c6fe91b 100644
---- a/src/Makefile.am
-+++ b/src/Makefile.am
+diff -ru orig/src/Makefile.am diff/src/Makefile.am
+--- orig/src/Makefile.am	2021-01-05 15:42:11.000000000 +0100
++++ diff/src/Makefile.am	2021-12-13 16:02:44.148577381 +0100
 @@ -1,5 +1,9 @@
  
 -SUBDIRS = polkit polkitbackend polkitagent programs
@@ -73,11 +58,10 @@ index 09fc7b3..c6fe91b 100644
  
  if BUILD_EXAMPLES
  SUBDIRS += examples
-diff --git a/src/polkitagent/Makefile.am b/src/polkitagent/Makefile.am
-index 49720db..633f9d4 100644
---- a/src/polkitagent/Makefile.am
-+++ b/src/polkitagent/Makefile.am
-@@ -79,6 +79,7 @@ libpolkit_agent_1_la_LIBADD =                               		\
+diff -ru orig/src/polkitagent/Makefile.am diff/src/polkitagent/Makefile.am
+--- orig/src/polkitagent/Makefile.am	2021-01-05 15:42:11.000000000 +0100
++++ diff/src/polkitagent/Makefile.am	2021-12-13 16:04:35.701041470 +0100
+@@ -79,6 +79,7 @@
  
  libpolkit_agent_1_la_LDFLAGS = -export-symbols-regex '(^polkit_.*)'
  
@@ -85,7 +69,7 @@ index 49720db..633f9d4 100644
  libprivdir = $(prefix)/lib/polkit-1
  libpriv_PROGRAMS = polkit-agent-helper-1
  
-@@ -113,6 +114,8 @@ polkit_agent_helper_1_LDFLAGS = 					\
+@@ -113,6 +114,8 @@
  	$(AM_LDFLAGS)							\
  	$(NULL)
  
@@ -94,7 +78,7 @@ index 49720db..633f9d4 100644
  if HAVE_INTROSPECTION
  
  girdir = $(INTROSPECTION_GIRDIR)
-@@ -142,6 +145,7 @@ include $(INTROSPECTION_MAKEFILE)
+@@ -142,6 +145,7 @@
  
  endif # HAVE_INTROSPECTION
  
@@ -102,18 +86,18 @@ index 49720db..633f9d4 100644
  # polkit-agent-helper-1 need to be setuid root because it's used to
  # authenticate not only the invoking user, but possibly also root
  # and/or other users.
-@@ -149,6 +153,7 @@ endif # HAVE_INTROSPECTION
+@@ -149,6 +153,8 @@
  install-data-hook:
  	-chown root $(DESTDIR)$(libprivdir)/polkit-agent-helper-1
  	-chmod 4755 $(DESTDIR)$(libprivdir)/polkit-agent-helper-1
 +endif # !POLKIT_AUTHFW_NONE
++
  
- EXTRA_DIST = polkitagentmarshal.list polkitagentenumtypes.h.template polkitagentenumtypes.c.template
- CLEANFILES = $(gir_DATA) $(typelibs_DATA)
-diff --git a/test/Makefile.am b/test/Makefile.am
-index 59d0680..d43b0fe 100644
---- a/test/Makefile.am
-+++ b/test/Makefile.am
+ EXTRA_DIST =				\
+	polkitagentmarshal.list		\
+diff -ru orig/test/Makefile.am diff/test/Makefile.am
+--- orig/test/Makefile.am	2021-01-05 15:42:11.000000000 +0100
++++ diff/test/Makefile.am	2021-12-13 16:05:06.049167730 +0100
 @@ -1,7 +1,11 @@
  
 -SUBDIRS = mocklibc . polkit polkitbackend
@@ -127,7 +111,3 @@ index 59d0680..d43b0fe 100644
  noinst_LTLIBRARIES = libpolkit-test-helper.la
  libpolkit_test_helper_la_SOURCES = polkittesthelper.c polkittesthelper.h
  libpolkit_test_helper_la_LIBADD = $(GLIB_LIBS)
--- 
-2.21.0
-
-

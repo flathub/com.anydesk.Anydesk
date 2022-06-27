@@ -164,8 +164,8 @@
                         "url-template": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-$version.tar.xz"
                     },
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.7.0.tar.xz",
-                    "sha256": "9d40b97be8b6a2cdf96aead5a61881d1f7e4e0da9544a9bac4fba1ae9dcd40eb"
+                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.8.0.tar.xz",
+                    "sha256": "91edbd0429a84705c9ad156d4ff38ccc724d41ea54c4c5b88e38e996f8a34f05"
                 }
             ]
         },
@@ -234,9 +234,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://download.anydesk.com/linux/anydesk-6.1.1-amd64.tar.gz",
-                    "sha256": "102e72c75502a4779083320322dd047e2b0c00a25ead7444a00aad1db54325aa",
-                    "size": 5296860,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.2.0-amd64.tar.gz",
+                    "sha256": "93ce67407d855b21170e007e3dde324ad7cd0a3922206136bc0fd84d72da2b8a",
+                    "size": 6216311,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",

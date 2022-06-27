@@ -240,8 +240,7 @@
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",
-                        "url-pattern": "(https://download.anydesk.com/linux/anydesk-[0-9.]+-amd64.tar.gz)",
-                        "version-pattern": "https://download.anydesk.com/linux/anydesk-([0-9.]+)-amd64.tar.gz"
+                        "pattern": "(https://download.anydesk.com/linux/anydesk-([0-9.]+)-amd64.tar.gz)"
                     }
                 }
             ]

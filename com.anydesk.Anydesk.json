@@ -105,8 +105,8 @@
                         "url-template": "https://www.freedesktop.org/software/polkit/releases/polkit-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-0.120.tar.gz",
-                    "sha256": "ee7a599a853117bf273548725719fa92fabd2f136915c7a4906cee98567aee03"
+                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-121.tar.gz",
+                    "sha256": "9dc7ae341a797c994a5a36da21963f0c5c8e3e5a1780ccc2a5f52e7be01affaa"
                 },
                 {
                     "type": "patch",
@@ -164,8 +164,8 @@
                         "url-template": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-$version.tar.xz"
                     },
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.7.0.tar.xz",
-                    "sha256": "9d40b97be8b6a2cdf96aead5a61881d1f7e4e0da9544a9bac4fba1ae9dcd40eb"
+                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.8.0.tar.xz",
+                    "sha256": "91edbd0429a84705c9ad156d4ff38ccc724d41ea54c4c5b88e38e996f8a34f05"
                 }
             ]
         },
@@ -234,9 +234,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://download.anydesk.com/linux/anydesk-6.1.1-amd64.tar.gz",
-                    "sha256": "102e72c75502a4779083320322dd047e2b0c00a25ead7444a00aad1db54325aa",
-                    "size": 5296860,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.2.0-amd64.tar.gz",
+                    "sha256": "93ce67407d855b21170e007e3dde324ad7cd0a3922206136bc0fd84d72da2b8a",
+                    "size": 6216311,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",

@@ -16,6 +16,11 @@
         "--device=dri",
         "--filesystem=home"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/gtk-doc"
+    ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
         {

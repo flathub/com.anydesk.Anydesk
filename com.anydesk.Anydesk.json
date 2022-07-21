@@ -76,18 +76,15 @@
         },
         {
             "name": "polkit",
+            "buildsystem": "meson",
             "config-opts": [
-                "--disable-polkitd",
-                "--disable-man-pages",
-                "--disable-introspection",
-                "--disable-examples",
-                "--disable-gtk-doc",
-                "--disable-libelogind",
-                "--disable-libsystemd-login",
-                "--with-systemdsystemunitdir=no",
-                "--with-authdb=dummy"
+                "-Dlibs-only=true",
+                "-Dman=false",
+                "-Dintrospection=false",
+                "-Dexamples=false",
+                "-Dgtk_doc=false",
+                "-Dauthfw=shadow"
             ],
-            "rm-configure": true,
             "cleanup": [
                 "/bin/*",
                 "/etc/pam.d",
@@ -105,17 +102,12 @@
                         "url-template": "https://www.freedesktop.org/software/polkit/releases/polkit-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-0.120.tar.gz",
-                    "sha256": "ee7a599a853117bf273548725719fa92fabd2f136915c7a4906cee98567aee03"
+                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-121.tar.gz",
+                    "sha256": "9dc7ae341a797c994a5a36da21963f0c5c8e3e5a1780ccc2a5f52e7be01affaa"
                 },
                 {
                     "type": "patch",
-                    "path": "polkit-build-Add-option-to-build-without-polkitd.patch"
-                },
-                {
-                    "type": "file",
-                    "path": "polkit-autogen",
-                    "dest-filename": "autogen.sh"
+                    "path": "polkit-build-add-option-to-skip-building-polkitd.patch"
                 }
             ]
         },

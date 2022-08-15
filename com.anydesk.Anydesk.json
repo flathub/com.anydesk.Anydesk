@@ -186,6 +186,20 @@
             ]
         },
         {
+            "name": "lsb-release-compat",
+            "buildsystem": "simple",
+            "build-commands": [
+                "make install PREFIX=/app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.com/nanonyme/lsb-release-compat.git",
+                    "commit": "f4f908b62dcc9cd081eb2a42b6ad7cf98db4bb10"
+                }
+            ]
+        },
+        {
             "name": "anydesk",
             "buildsystem": "simple",
             "build-commands": [

@@ -13,6 +13,7 @@
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
+        "--system-talk-name=org.freedesktop.login1",
         "--device=dri",
         "--filesystem=home"
     ],

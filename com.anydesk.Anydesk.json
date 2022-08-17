@@ -201,6 +201,35 @@
             ]
         },
         {
+            "name": "libcanberra-gtk2",
+            "cleanup": [
+                "*.la",
+                "/bin",
+                "/etc",
+                "/include",
+                "/libexec",
+                "/share/gtk-doc",
+                "/share/man"
+            ],
+            "config-opts": [
+                "--disable-static",
+                "--disable-gtk-doc",
+                "--disable-oss",
+                "--enable-pulse",
+                "--disable-udev",
+                "--enable-gtk",
+                "--disable-gtk3",
+                "--disable-lynx"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+                    "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
+                }
+            ]
+        },
+        {
             "name": "anydesk",
             "buildsystem": "simple",
             "build-commands": [

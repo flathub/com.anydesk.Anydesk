@@ -181,8 +181,8 @@
                         "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.0.tar.gz",
-                    "sha256": "2a92adda3992aa7cbad758ef0b8dfeaedebb49338b772c64ddf369d78c1c51d3"
+                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.1.tar.gz",
+                    "sha256": "87faee6d4873c5631e8bb53e85134084b862185da682de8617f08ca18d82e216"
                 }
             ]
         },
@@ -275,9 +275,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://download.anydesk.com/linux/anydesk-6.1.1-amd64.tar.gz",
-                    "sha256": "102e72c75502a4779083320322dd047e2b0c00a25ead7444a00aad1db54325aa",
-                    "size": 5296860,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.2.0-amd64.tar.gz",
+                    "sha256": "93ce67407d855b21170e007e3dde324ad7cd0a3922206136bc0fd84d72da2b8a",
+                    "size": 6216311,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://anydesk.com/en/downloads/linux",

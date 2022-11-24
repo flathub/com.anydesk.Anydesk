@@ -31,7 +31,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 1785,
-                        "url-template": "https://www.x.org/releases/individual/lib/libXmu-$version.tar.bz2"
+                        "url-template": "https://www.x.org/releases/individual/lib/libXmu-$version.tar.xz"
                     },
                     "type": "archive",
                     "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.3.tar.bz2",
@@ -105,7 +105,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 3682,
-                        "url-template": "https://www.freedesktop.org/software/polkit/releases/polkit-$version.tar.gz"
+                        "url-template": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.gz"
                     },
                     "type": "archive",
                     "url": "https://www.freedesktop.org/software/polkit/releases/polkit-121.tar.gz",
@@ -159,7 +159,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 2605,
-                        "url-template": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-$version.tar.xz"
+                        "url-template": "https://mj.ucw.cz/download/linux/pci/pciutils-$version.tar.gz"
                     },
                     "type": "archive",
                     "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.8.0.tar.xz",

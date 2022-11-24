@@ -108,12 +108,8 @@
                         "url-template": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-121.tar.gz",
-                    "sha256": "9dc7ae341a797c994a5a36da21963f0c5c8e3e5a1780ccc2a5f52e7be01affaa"
-                },
-                {
-                    "type": "patch",
-                    "path": "polkit-build-add-option-to-skip-building-polkitd.patch"
+                    "url": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/122/polkit-122.tar.gz",
+                    "sha256": "0d69656d60800835c3d7d1f0a8362b32e1ae3ace2875a35bb624296fc52d5dc4"
                 }
             ]
         },

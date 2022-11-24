@@ -31,11 +31,11 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 1785,
-                        "url-template": "https://www.x.org/releases/individual/lib/libXmu-$version.tar.bz2"
+                        "url-template": "https://www.x.org/releases/individual/lib/libXmu-$version.tar.xz"
                     },
                     "type": "archive",
-                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.3.tar.bz2",
-                    "sha256": "9c343225e7c3dc0904f2122b562278da5fed639b1b5e880d25111561bac5b731"
+                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.4.tar.xz",
+                    "sha256": "210de3ab9c3e9382572c25d17c2518a854ce6e2c62c5f8315deac7579e758244"
                 }
             ]
         },
@@ -105,15 +105,11 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 3682,
-                        "url-template": "https://www.freedesktop.org/software/polkit/releases/polkit-$version.tar.gz"
+                        "url-template": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/polkit/releases/polkit-121.tar.gz",
-                    "sha256": "9dc7ae341a797c994a5a36da21963f0c5c8e3e5a1780ccc2a5f52e7be01affaa"
-                },
-                {
-                    "type": "patch",
-                    "path": "polkit-build-add-option-to-skip-building-polkitd.patch"
+                    "url": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/122/polkit-122.tar.gz",
+                    "sha256": "0d69656d60800835c3d7d1f0a8362b32e1ae3ace2875a35bb624296fc52d5dc4"
                 }
             ]
         },
@@ -159,11 +155,11 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 2605,
-                        "url-template": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-$version.tar.xz"
+                        "url-template": "https://mj.ucw.cz/download/linux/pci/pciutils-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.8.0.tar.xz",
-                    "sha256": "91edbd0429a84705c9ad156d4ff38ccc724d41ea54c4c5b88e38e996f8a34f05"
+                    "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.9.0.tar.gz",
+                    "sha256": "8953a785b2e3af414434b8fdcbfb75c90758819631001e60dd3afb89b22b2331"
                 }
             ]
         },
@@ -181,8 +177,8 @@
                         "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.0.tar.gz",
-                    "sha256": "2a92adda3992aa7cbad758ef0b8dfeaedebb49338b772c64ddf369d78c1c51d3"
+                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.1.tar.gz",
+                    "sha256": "87faee6d4873c5631e8bb53e85134084b862185da682de8617f08ca18d82e216"
                 }
             ]
         },

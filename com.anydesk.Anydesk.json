@@ -137,8 +137,7 @@
                     "type": "patch",
                     "paths": [
                         "gtk2.20.patch",
-                        "gtkglext-gcc8.patch",
-                        "x11-libs_gtkglext_files_gtkglext-1.2.0-no-pangox.patch"
+                        "gtkglext-gcc8.patch"
                     ]
                 }
             ]

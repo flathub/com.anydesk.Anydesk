@@ -8,3 +8,4 @@ Terminal=false
 TryExec=anydesk
 Type=Application
 Categories=Network;GTK;
+StartupWMClass=anydesk

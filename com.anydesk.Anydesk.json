@@ -50,8 +50,8 @@
                         "url-template": "https://zlib.net/zlib-$version.tar.xz"
                     },
                     "type": "archive",
-                    "url": "https://zlib.net/zlib-1.2.13.tar.xz",
-                    "sha256": "d14c38e313afc35a9a8760dadf26042f51ea0f5d154b0630a31da0540107fb98"
+                    "url": "https://zlib.net/fossils/zlib-1.2.13.tar.gz",
+                    "sha256": "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30"
                 },
                 {
                     "type": "script",
@@ -219,7 +219,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+                    "url": "https://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
                     "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
                 }
             ]

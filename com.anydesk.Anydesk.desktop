@@ -2,10 +2,11 @@
 Name=AnyDesk
 GenericName=AnyDesk
 X-GNOME-FullName=AnyDesk
-Exec=anydesk
+Exec=anydesk %u
 Icon=com.anydesk.Anydesk
 Terminal=false
 TryExec=anydesk
 Type=Application
 Categories=Network;GTK;
+MimeType=x-scheme-handler/anydesk;
 StartupWMClass=anydesk

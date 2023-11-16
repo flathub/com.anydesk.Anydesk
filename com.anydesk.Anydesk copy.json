@@ -1,0 +1,181 @@
+{
+    "app-id": "com.anydesk.Anydesk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "23.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "anydesk",
+    "separate-locales": false,
+    "tags": [
+        "proprietary"
+    ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--system-talk-name=org.freedesktop.login1",
+        "--device=dri",
+        "--filesystem=home"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/gtk-doc"
+    ],
+    "modules": [
+        {
+            "name": "lsb-release-compat",
+            "buildsystem": "simple",
+            "build-commands": [
+                "make install PREFIX=/app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.com/nanonyme/lsb-release-compat.git",
+                    "commit": "f4f908b62dcc9cd081eb2a42b6ad7cf98db4bb10"
+                }
+            ]
+        },
+        {
+            "name": "polkit",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dlibs-only=true",
+                "-Dman=false",
+                "-Dintrospection=false",
+                "-Dexamples=false",
+                "-Dgtk_doc=false",
+                "-Dauthfw=shadow"
+            ],
+            "cleanup": [
+                "/bin/*",
+                "/etc/pam.d",
+                "/etc/dbus-1",
+                "/share/dbus-1/system-services/*",
+                "/share/polkit-1",
+                "/share/polkit-1/actions/*",
+                "/lib/polkit-1"
+            ],
+            "sources": [
+                {
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 3682,
+                        "url-template": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.gz"
+                    },
+                    "type": "archive",
+                    "url": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/123/polkit-123.tar.gz",
+                    "sha256": "b69278f6ea0eac406350c45f5720e2fe5e4beaf9f53c16d9902e025965418864"
+                }
+            ]
+        },
+        "shared-modules/gtk2/gtk2.json",
+        "shared-modules/glu/glu-9.json",
+        {
+            "name": "libcanberra-gtk2",
+            "cleanup": [
+                "*.la",
+                "/bin",
+                "/etc",
+                "/include",
+                "/libexec",
+                "/share/gtk-doc",
+                "/share/man"
+            ],
+            "config-opts": [
+                "--disable-static",
+                "--disable-gtk-doc",
+                "--disable-oss",
+                "--enable-pulse",
+                "--disable-udev",
+                "--enable-gtk",
+                "--disable-gtk3",
+                "--disable-lynx"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+                    "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
+                }
+            ]
+        },
+        {
+            "name": "pangox-compat",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/Archive/pangox-compat",
+                    "commit": "edb9e0904d04d1da02bba7b78601a2aba05aaa47"
+                },
+                {
+                    "type": "patch",
+                    "paths": [
+                        "0001-Re-add-pango_x_get_shaper_map-it-is-still-used-in-th.patch",
+                        "0002-disable-shaper.patch"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "gtkglext",
+            "build-commands": [
+                "sed '/AC_PATH_XTRA/d' -i configure.in",
+                "./configure --prefix=/app --disable-static",
+                "make",
+                "make install"
+            ],
+            "sources": [
+                {
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gtkglext"
+                    },
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtkglext/1.2/gtkglext-1.2.0.tar.bz2",
+                    "sha256": "16bd736074f6b14180f206b7e91263fc721b49912ea3258ab5f094cfa5497f51"
+                },
+                {
+                    "type": "patch",
+                    "paths": [
+                        "gtk2.20.patch",
+                        "gtkglext-gcc8.patch"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "anydesk",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 anydesk ${FLATPAK_DEST}/bin/anydesk",
+                "find icons -name anydesk.png | xargs dirname | xargs -i install -Dm644 {}/anydesk.png ${FLATPAK_DEST}/share/{}/com.anydesk.Anydesk.png",
+                "install -Dm644 icons/hicolor/scalable/apps/anydesk.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+                "install -t ${FLATPAK_DEST}/share/appdata/ -Dm644 ${FLATPAK_ID}.appdata.xml",
+                "install -t ${FLATPAK_DEST}/share/applications/ -Dm644 ${FLATPAK_ID}.desktop"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.anydesk.com/linux/anydesk-6.3.0-amd64.tar.gz",
+                    "sha256": "b1e3337d35ce19af93963829988b2014e8acfbbf6bd1b5adfb8bc7dcd6fee452",
+                    "size": 7050807,
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://download.anydesk.com/linux/",
+                        "pattern": "(https://download.anydesk.com/linux/anydesk-([0-9.]+)-amd64.tar.gz)"
+                    }
+                },
+                {
+                    "type": "file",
+                    "path": "com.anydesk.Anydesk.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "com.anydesk.Anydesk.desktop"
+                }
+            ]
+        }
+    ]
+}

@@ -108,8 +108,8 @@
                         "url-template": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/122/polkit-122.tar.gz",
-                    "sha256": "0d69656d60800835c3d7d1f0a8362b32e1ae3ace2875a35bb624296fc52d5dc4"
+                    "url": "https://gitlab.freedesktop.org/polkit/polkit/-/archive/124/polkit-124.tar.gz",
+                    "sha256": "72457d96a0538fd03a3ca96a6bf9b7faf82184d4d67c793eb759168e4fd49e20"
                 }
             ]
         },
@@ -176,8 +176,8 @@
                         "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.1.tar.gz",
-                    "sha256": "87faee6d4873c5631e8bb53e85134084b862185da682de8617f08ca18d82e216"
+                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.2.tar.gz",
+                    "sha256": "d1a7e659bc7ae1aa1fc1ecced261c734df5ad5d86af1ef7a946be0e2d841e51d"
                 }
             ]
         },

@@ -157,8 +157,8 @@
                         "url-template": "https://mj.ucw.cz/download/linux/pci/pciutils-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.10.0.tar.gz",
-                    "sha256": "7deabe38ae5fa88a96a8c4947975cf31c591506db546e9665a10dddbf350ead0"
+                    "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.11.1.tar.gz",
+                    "sha256": "1904864ce5b0272d0a2e42e72ceac9e8810d1898480567f36b70642f8205fbfd"
                 }
             ]
         },

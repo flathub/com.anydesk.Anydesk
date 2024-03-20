@@ -1,52 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.anydesk.Anydesk.desktop</id>
-  <name>AnyDesk</name>
-  <project_license>LicenseRef-proprietary</project_license>
-  <developer_name>AnyDesk Software GmbH</developer_name>
+
   <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+
+  <name>AnyDesk</name>
   <summary>Connect to a computer remotely</summary>
   <summary xml:lang="pt_BR">Conectar com um computador remotamente</summary>
   <summary xml:lang="es">Conéctese a un ordenador de forma remota</summary>
-  <url type="homepage">https://www.anydesk.com</url>
-  <url type="bugtracker">https://github.com/flathub/com.anydesk.Anydesk/issues</url>
-  <description><p>AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.</p><p>NOTE: This wrapper is not verified by, affiliated with, or supported by AnyDesk.</p></description>
-  <description xml:lang="pt_BR"><p>A AnyDesk assegura ligações de computador remoto seguras e fiáveis tanto para profissionais de TI como para pessoas em viagem.</p><p>NOTA: Este aplicativo não foi empacotado pelo AnyDesk</p></description>
-  <description xml:lang="es"><p>Gracias a AnyDesk, contará con conexiones seguras y fiables de escritorio remoto para profesionales informáticos y usuarios en movimiento.</p><p>NOTA: Esta aplicación no ha sido empaquetado por AnyDesk</p></description>
+
+  <description>
+    <p>AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.</p>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by AnyDesk.</p>
+    <p xml:lang="pt_BR">A AnyDesk assegura ligações de computador remoto seguras e fiáveis tanto para profissionais de TI como para pessoas em viagem.</p>
+    <p xml:lang="pt_BR">NOTA: Este aplicativo não foi empacotado pelo AnyDesk</p>
+    <p xml:lang="es">Gracias a AnyDesk, contará con conexiones seguras y fiables de escritorio remoto para profesionales informáticos y usuarios en movimiento.</p>
+    <p xml:lang="es">NOTA: Esta aplicación no ha sido empaquetado por AnyDesk</p>
+  </description>
+
+  <developer id="com.anydesk">
+    <name translate="no">AnyDesk Software GmbH</name>
+  </developer>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+
+  <launchable type="desktop-id">com.anydesk.Anydesk.desktop</launchable>
+
   <screenshots>
+    <screenshot type="default">
+      <caption>Main view</caption>
+      <image type="source" width="1256" height="829">https://github.com/flathub/com.anydesk.Anydesk/raw/master/Screenshots/AnyDeskV6_main_view.png</image>
+    </screenshot>
     <screenshot>
-      <image type="source">https://github.com/flathub/com.anydesk.Anydesk/raw/b27de5e35d6651a35a2ea8e2568dfc4d021c4b0c/Screenshots/anydesk-v5-linux-main-screen-en-2e1b4e.png</image>
+      <caption>Session Recording</caption>
+      <image type="source" width="1021" height="787">https://github.com/flathub/com.anydesk.Anydesk/raw/master/Screenshots/AnyDeskV6_session_recording.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>2FA Setup</caption>
+      <image type="source" width="902" height="652">https://github.com/flathub/com.anydesk.Anydesk/raw/master/Screenshots/AnyDeskV6_2fa_setup.png</image>
     </screenshot>
   </screenshots>
+
+  <url type="homepage">https://www.anydesk.com</url>
+  <url type="bugtracker">https://github.com/flathub/com.anydesk.Anydesk/issues</url>
+
   <categories>
     <category>Network</category>
   </categories>
-      <releases>
-        <release version="6.3.1" date="2024-03-18"/>
-        <release version="6.3.0" date="2023-08-10"/>
-        <release version="6.2.1" date="2022-11-02"/>
-        <release version="6.1.1" date="2021-04-15"/>
-        <release version="6.1.0" date="2021-01-28"/>
-        <release version="6.0.1" date="2020-08-25"/>
-        <release version="6.0.0" date="2020-07-28"/>
-        <release version="5.5.6" date="2020-05-08"/>
-        <release version="5.5.5" date="2020-04-20"/>
-        <release version="5.5.4" date="2020-02-25"/>
-        <release version="5.5.3" date="2020-02-21"/>
-        <release version="5.5.2" date="2020-02-17"/>
-        <release version="5.5.1" date="2019-12-03"/>
-        <release version="5.5.0" date="2019-11-18"/>
-        <release version="5.4.1" date="2019-10-31"/>
-        <release version="5.4.0" date="2019-10-24"/>
-        <release version="5.1.2" date="2019-08-21"/>
-        <release date="2019-06-13" version="5.1.1"/>
-        <release date="2018-11-09" version="4.0.1"/>
-        <release date="2018-09-17" version="4.0.0"/>
-        <release date="2018-06-14" version="2.9.6"/>
-        <release date="2017-09-14" version="2.9.5"/>
+
+  <releases>
+    <release version="6.3.1" date="2024-03-18"/>
+    <release version="6.3.0" date="2023-08-10"/>
+    <release version="6.2.1" date="2022-11-02"/>
+    <release version="6.1.1" date="2021-04-15"/>
+    <release version="6.1.0" date="2021-01-28"/>
+    <release version="6.0.1" date="2020-08-25"/>
+    <release version="6.0.0" date="2020-07-28"/>
+    <release version="5.5.6" date="2020-05-08"/>
+    <release version="5.5.5" date="2020-04-20"/>
+    <release version="5.5.4" date="2020-02-25"/>
+    <release version="5.5.3" date="2020-02-21"/>
+    <release version="5.5.2" date="2020-02-17"/>
+    <release version="5.5.1" date="2019-12-03"/>
+    <release version="5.5.0" date="2019-11-18"/>
+    <release version="5.4.1" date="2019-10-31"/>
+    <release version="5.4.0" date="2019-10-24"/>
+    <release version="5.1.2" date="2019-08-21"/>
+    <release date="2019-06-13" version="5.1.1"/>
+    <release date="2018-11-09" version="4.0.1"/>
+    <release date="2018-09-17" version="4.0.0"/>
+    <release date="2018-06-14" version="2.9.6"/>
+    <release date="2017-09-14" version="2.9.5"/>
   </releases>
-  <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/bpm79oQCS4VMwIG-jajHfpsIhsUodP5fHDa3V2cMXLiwkSscAAviezm9YlmSxgjkB-A=w64</icon>
-  <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/bpm79oQCS4VMwIG-jajHfpsIhsUodP5fHDa3V2cMXLiwkSscAAviezm9YlmSxgjkB-A=w128</icon>
+
+  <icon type="stock">com.anydesk.Anydesk</icon>
+
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
@@ -76,6 +109,4 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-
-  <update_contact>nick_at_nedrichards.com</update_contact>
 </component>

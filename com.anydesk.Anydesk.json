@@ -34,8 +34,8 @@
                         "url-template": "https://www.x.org/releases/individual/lib/libXmu-$version.tar.xz"
                     },
                     "type": "archive",
-                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.1.4.tar.xz",
-                    "sha256": "210de3ab9c3e9382572c25d17c2518a854ce6e2c62c5f8315deac7579e758244"
+                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.2.0.tar.xz",
+                    "sha256": "072026fe305889538e5b0c5f9cbcd623d2c27d2b85dcd37ca369ab21590b6963"
                 }
             ]
         },
@@ -157,8 +157,8 @@
                         "url-template": "https://mj.ucw.cz/download/linux/pci/pciutils-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.11.1.tar.gz",
-                    "sha256": "1904864ce5b0272d0a2e42e72ceac9e8810d1898480567f36b70642f8205fbfd"
+                    "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.12.0.tar.gz",
+                    "sha256": "827a641d2016a15f0b959804daa5a05f055d0f91d58a70d32ac41ce7ef94164e"
                 }
             ]
         },

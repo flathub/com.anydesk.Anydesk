@@ -1,7 +1,7 @@
 {
     "app-id": "com.anydesk.Anydesk",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "anydesk",
     "separate-locales": false,
@@ -15,7 +15,8 @@
         "--share=network",
         "--system-talk-name=org.freedesktop.login1",
         "--device=dri",
-        "--filesystem=home"
+        "--filesystem=home",
+        "--env=GDK_SCALE=1"
     ],
     "cleanup": [
         "/include",
@@ -23,63 +24,6 @@
         "/share/gtk-doc"
     ],
     "modules": [
-        "shared-modules/intltool/intltool-0.51.json",
-        {
-            "name": "libxmu",
-            "sources": [
-                {
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 1785,
-                        "url-template": "https://www.x.org/releases/individual/lib/libXmu-$version.tar.xz"
-                    },
-                    "type": "archive",
-                    "url": "https://www.x.org/releases/individual/lib/libXmu-1.2.1.tar.xz",
-                    "sha256": "fcb27793248a39e5fcc5b9c4aec40cc0734b3ca76aac3d7d1c264e7f7e14e8b2"
-                }
-            ]
-        },
-        {
-            "name": "minizip",
-            "subdir": "contrib/minizip",
-            "sources": [
-                {
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 5303,
-                        "url-template": "https://zlib.net/fossils/zlib-$version.tar.gz"
-                    },
-                    "type": "archive",
-                    "url": "https://zlib.net/fossils/zlib-1.3.1.tar.gz",
-                    "sha256": "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23"
-                },
-                {
-                    "type": "script",
-                    "dest": "contrib/minizip/",
-                    "dest-filename": "autogen.sh",
-                    "commands": [
-                        "autoreconf -ifv"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "pangox-compat",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/Archive/pangox-compat",
-                    "commit": "edb9e0904d04d1da02bba7b78601a2aba05aaa47"
-                },
-                {
-                    "type": "patch",
-                    "paths": [
-                        "0001-Re-add-pango_x_get_shaper_map-it-is-still-used-in-th.patch",
-                        "0002-disable-shaper.patch"
-                    ]
-                }
-            ]
-        },
         {
             "name": "polkit",
             "buildsystem": "meson",
@@ -113,122 +57,12 @@
                 }
             ]
         },
-        "shared-modules/gtk2/gtk2.json",
-        "shared-modules/glu/glu-9.json",
-        {
-            "name": "gtkglext",
-            "build-commands": [
-                "sed '/AC_PATH_XTRA/d' -i configure.in",
-                "./configure --prefix=/app --disable-static",
-                "make",
-                "make install"
-            ],
-            "sources": [
-                {
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gtkglext"
-                    },
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtkglext/1.2/gtkglext-1.2.0.tar.bz2",
-                    "sha256": "16bd736074f6b14180f206b7e91263fc721b49912ea3258ab5f094cfa5497f51"
-                },
-                {
-                    "type": "patch",
-                    "paths": [
-                        "gtk2.20.patch",
-                        "gtkglext-gcc8.patch"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "pciutils",
-            "buildsystem": "simple",
-            "build-commands": [
-                "make",
-                "make PREFIX=/app SBINDIR=/app/bin install"
-            ],
-            "sources": [
-                {
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 2605,
-                        "url-template": "https://mj.ucw.cz/download/linux/pci/pciutils-$version.tar.gz"
-                    },
-                    "type": "archive",
-                    "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.13.0.tar.gz",
-                    "sha256": "a03c88a0aab709b1697ca1753766f443e78297f84c7bcd80a82c1422edd7cb42"
-                }
-            ]
-        },
-        {
-            "name": "libxkbfile",
-            "config-opts": [
-                "--disable-static",
-                "--enable-x11"
-            ],
-            "sources": [
-                {
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 1781,
-                        "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
-                    },
-                    "type": "archive",
-                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.1.3.tar.gz",
-                    "sha256": "c4c2687729d1f920f165ebb96557a1ead2ef655809ab5eaa66a1ad36dc31050d"
-                }
-            ]
-        },
-        {
-            "name": "lsb-release-compat",
-            "buildsystem": "simple",
-            "build-commands": [
-                "make install PREFIX=/app"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.com/nanonyme/lsb-release-compat.git",
-                    "commit": "f4f908b62dcc9cd081eb2a42b6ad7cf98db4bb10"
-                }
-            ]
-        },
-        {
-            "name": "libcanberra-gtk2",
-            "cleanup": [
-                "*.la",
-                "/bin",
-                "/etc",
-                "/include",
-                "/libexec",
-                "/share/gtk-doc",
-                "/share/man"
-            ],
-            "config-opts": [
-                "--disable-static",
-                "--disable-gtk-doc",
-                "--disable-oss",
-                "--enable-pulse",
-                "--disable-udev",
-                "--enable-gtk",
-                "--disable-gtk3",
-                "--disable-lynx"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
-                    "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
-                }
-            ]
-        },
         {
             "name": "anydesk",
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm755 apply_extra /app/bin/apply_extra",
+                "install -Dm755 lsb_release /app/bin/lsb_release",
                 "install -Dm755 anydesk.sh /app/bin/anydesk",
                 "for size in 16 24 32 48 64 128 256 512; do\n                    rsvg-convert -w $size -h $size -f png -o $size.png anydesk.svg\n                    install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.anydesk.Anydesk.png\n                done",
                 "install -Dm644 anydesk.svg export/share/icons/hicolor/scalable/apps/com.anydesk.Anydesk.svg",
@@ -249,7 +83,14 @@
                     "type": "script",
                     "dest-filename": "anydesk.sh",
                     "commands": [
-                        "exec /app/extra/anydesk \"$@\""
+                        "ldd /app/extra/anydesk && exec /app/extra/anydesk \"$@\""
+                    ]
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "lsb_release",
+                    "commands": [
+                        "echo \"LSB Version:    n/a\""
                     ]
                 },
                 {

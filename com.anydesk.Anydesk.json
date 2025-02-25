@@ -108,9 +108,9 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "url": "https://download.anydesk.com/linux/anydesk-6.4.2-amd64.tar.gz",
-                    "sha256": "2894f220cb8a34bca60ff0ec8ad37e460ae8ee5824635ddf9a414dc6c1149165",
-                    "size": 8527290,
+                    "url": "https://download.anydesk.com/linux/anydesk-6.4.0-amd64.tar.gz",
+                    "sha256": "c86cd3a9bbf74904fa57f0dc63c1af4435e2958ad95d5b2640e9eacbfe7e7aff",
+                    "size": 8391102,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://download.anydesk.com/linux/",

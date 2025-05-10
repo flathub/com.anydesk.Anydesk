@@ -110,7 +110,7 @@
                     "filename": "anydesk.tar.gz",
                     "url": "https://download.anydesk.com/linux/anydesk-7.0.0-amd64.tar.gz",
                     "sha256": "0048f8fd2e24ea69c26ff09a8040e1a42b44c41f2922abfb5766ff6ebe270bff",
-                    "size": 14211541,
+                    "size": 14418210,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://download.anydesk.com/linux/",

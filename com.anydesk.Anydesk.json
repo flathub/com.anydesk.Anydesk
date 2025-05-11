@@ -83,7 +83,7 @@
                     "type": "script",
                     "dest-filename": "anydesk.sh",
                     "commands": [
-                        "ldd /app/extra/anydesk && exec /app/extra/anydesk \"$@\""
+                        "exec /app/extra/anydesk \"$@\""
                     ]
                 },
                 {

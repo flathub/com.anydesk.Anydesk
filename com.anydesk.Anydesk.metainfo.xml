@@ -11,8 +11,8 @@
   <summary xml:lang="es">Conéctese a un ordenador de forma remota</summary>
 
   <description>
+    <p>**This is a community package of AnyDesk and not officially supported by AnyDesk Software GmbH.**</p>
     <p>AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.</p>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by AnyDesk.</p>
     <p xml:lang="pt_BR">A AnyDesk assegura ligações de computador remoto seguras e fiáveis tanto para profissionais de TI como para pessoas em viagem.</p>
     <p xml:lang="pt_BR">NOTA: Este aplicativo não foi empacotado pelo AnyDesk</p>
     <p xml:lang="es">Gracias a AnyDesk, contará con conexiones seguras y fiables de escritorio remoto para profesionales informáticos y usuarios en movimiento.</p>
@@ -28,6 +28,11 @@
     <control>keyboard</control>
     <control>touch</control>
   </supports>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#fd958d</color>
+    <color type="primary" scheme_preference="dark">#7e211b</color>
+  </branding>
 
   <launchable type="desktop-id">com.anydesk.Anydesk.desktop</launchable>
 

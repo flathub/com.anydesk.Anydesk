@@ -108,10 +108,12 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "url": "https://download.anydesk.com/linux/anydesk-7.1.1-amd64.tar.gz",
-                    "sha256": "a46cd4e1d05e5a500200ebec841cd33cde8f70d7509105c08c61672becab280e",
-                    "size": 14732954,
-                    "only-arches": ["x86_64"],
+                    "url": "https://download.anydesk.com/linux/anydesk-7.1.2-amd64.tar.gz",
+                    "sha256": "e93b4247e7b1b45415c9ca01aa72e5b9f2f929e18156cdd4e8f3b10ab4bb1bcf",
+                    "size": 14882490,
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://download.anydesk.com/linux/",
@@ -121,10 +123,12 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "url": "https://download.anydesk.com/rpi/anydesk-7.1.1-arm64.tar.gz",
-                    "sha256": "d9d8c8e4d48772c5fb920f2cf00c2219654688eca47dbc7375e103157101c38c",
-                    "size": 14705581,
-                    "only-arches": ["aarch64"],
+                    "url": "https://download.anydesk.com/rpi/anydesk-7.1.2-arm64.tar.gz",
+                    "sha256": "4da6eb20c0535d369d4dffd3b04b5ec6176a4250c4fad0b7786f1e5af3e514ff",
+                    "size": 14913268,
+                    "only-arches": [
+                        "aarch64"
+                    ],
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://download.anydesk.com/rpi/",

@@ -59,6 +59,9 @@
   </categories>
 
   <releases>
+    <release version="7.1.4" date="2026-02-13">
+      <description>Bugfixes: AnyDesk One chat compatibility fixes</description>
+    </release>
     <release version="7.1.3" date="2026-01-23">
       <description></description>
     </release>

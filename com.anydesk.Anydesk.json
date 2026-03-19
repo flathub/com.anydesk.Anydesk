@@ -108,9 +108,9 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "url": "https://download.anydesk.com/linux/anydesk-8.0.1-amd64.tar.gz",
-                    "sha256": "9d964da7fce97e722c4c29c65ffe9c182884553c99ca84a14c03a311e9d4ce49",
-                    "size": 15957932,
+                    "url": "https://download.anydesk.com/linux/anydesk-8.0.0-amd64.tar.gz",
+                    "sha256": "1a1ae83cb260b19a7570a68f08bd0d5a085e85d2cf970dec23ed57299de31e62",
+                    "size": 15455968,
                     "only-arches": [
                         "x86_64"
                     ],
@@ -123,9 +123,9 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "url": "https://download.anydesk.com/rpi/anydesk-8.0.1-arm64.tar.gz",
-                    "sha256": "7a48be982e49eb615e904de98533269cc765de36fe493569168d3fa77c7e9143",
-                    "size": 15970863,
+                    "url": "https://download.anydesk.com/rpi/anydesk-8.0.0-arm64.tar.gz",
+                    "sha256": "78d0880015823caf357edc64ed83084a538bd50e7495f2e225fbce49cecb6724",
+                    "size": 15467127,
                     "only-arches": [
                         "aarch64"
                     ],

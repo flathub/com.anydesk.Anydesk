@@ -123,9 +123,9 @@
                 {
                     "type": "extra-data",
                     "filename": "anydesk.tar.gz",
-                    "url": "https://download.anydesk.com/rpi/anydesk-8.0.1-arm64.tar.gz",
-                    "sha256": "7a48be982e49eb615e904de98533269cc765de36fe493569168d3fa77c7e9143",
-                    "size": 15970863,
+                    "url": "https://download.anydesk.com/rpi/anydesk-8.0.0-arm64.tar.gz",
+                    "sha256": "78d0880015823caf357edc64ed83084a538bd50e7495f2e225fbce49cecb6724",
+                    "size": 15467127,
                     "only-arches": [
                         "aarch64"
                     ],

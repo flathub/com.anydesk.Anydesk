@@ -54,8 +54,14 @@
   <categories>
     <category>Network</category>
   </categories>
-
   <releases>
+    <release version="8.0.4" date="2026-06-30">
+      <description>
+        <ul>
+          <li>BugFix: Fixed a compatibility issue affecting older distributions</li>
+        </ul>
+      </description>
+    </release>
     <release version="8.0.3" date="2026-06-23">
       <description>
         <ul>
